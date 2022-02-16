@@ -145,6 +145,10 @@ metadata:
   name: trigger-binding-manual
 spec:
   params:
+    - name: nombre
+    value: $(body.nombre)
+    - name: namen
+    value: $(params.nombre)
 ---
 apiVersion: tekton.dev/v1beta1
 kind: EventListener
