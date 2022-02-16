@@ -130,8 +130,7 @@ spec:
    - name: namen
   value: $(params.nombre)
 ---
-apiVersion: tekton.dev/v1b - name: nombre
-  value: $(body.nombre)eta1
+apiVersion: tekton.dev/v1beta1
 kind: EventListener
 metadata:
   name: manual-run
