@@ -5,6 +5,8 @@ metadata:
   name: secure-kube-pipeline
 spec:
   params:
+    - name: nombre 
+      default: "juancarlos"
     - name: repository
       description: the git repo containing source code. If empty, the repository url will be found from toolchain
       default: ""
