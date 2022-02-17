@@ -140,7 +140,7 @@ spec:
           - name: pipeline-ws
             persistentVolumeClaim:
               claimName: secure-kube-$(uid)-pvc
-    -apiVersion: v1
+    - apiVersion: v1
      kind: Secret
      metadata:
        name: webhookenv
