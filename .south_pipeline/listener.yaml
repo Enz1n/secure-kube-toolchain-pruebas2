@@ -5,6 +5,8 @@ metadata:
   name: trigger-template-secure-kube
 spec:
   params:
+    - name: provided-nombre
+      value: "$(event.nombre)"
     - name: repository
       description: The git repo
     - name: branch
@@ -138,6 +140,14 @@ spec:
           - name: pipeline-ws
             persistentVolumeClaim:
               claimName: secure-kube-$(uid)-pvc
+    -apiVersion: v1
+     kind: Secret
+     metadata:
+       name: webhookenv
+       namespace: default
+     stringData:
+          NOMBRE: $(params.provided-nombre)
+     type: Opaque          
 ---
 apiVersion: tekton.dev/v1beta1
 kind: TriggerBinding
