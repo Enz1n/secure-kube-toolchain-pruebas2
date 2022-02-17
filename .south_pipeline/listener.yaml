@@ -84,6 +84,8 @@ spec:
         pipelineRef:
           name: secure-kube-pipeline
         params:
+          - name: nombre
+            value: nombre-de-prueba
           - name: repository
             value: $(params.repository)
           - name: branch
