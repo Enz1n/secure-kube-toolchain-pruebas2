@@ -301,6 +301,8 @@ spec:
         name: iks-deploy-to-kubernetes
       runAfter: [vulnerability-advisor]
       params:
+        - name: provide-name
+          value: $(params.nombre)
         - name: shuttle-properties-file
           value: "build.properties"
         - name: cluster-region
