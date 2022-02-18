@@ -6,7 +6,7 @@ metadata:
 spec:
   params:
     - name: provided-nombre
-      value: "$(event.nombre)"
+      default: "juancarlos"
     - name: repository
       description: The git repo
     - name: branch
